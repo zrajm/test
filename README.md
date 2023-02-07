@@ -1,6 +1,6 @@
 <!--*- markdown -*-->
 
-# <a id=e8c60></a> Installation and Setup
+# <a id=e8c60>Installation and Setup</a>
 
 
 ## <a id=f8aeb></a> 1. Download the Source
@@ -129,7 +129,7 @@ Settings changed in `signbank/settings/production.py`:
     -ALLOWED_HOSTS = ['signbank.csc.fi']
     +ALLOWED_HOSTS = ['signbank.ling.su.se']
 
-NOTE: [`ALLOWED_HOSTS` setting may *not contain port number*.](#b278e)
+**Note:** [`ALLOWED_HOSTS` *must not contain a port number*.](#b278e)
 
      # A list of directories where Django looks for translation files.
      LOCALE_PATHS = (
