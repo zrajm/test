@@ -2,15 +2,20 @@
 
 # <a id=e8c60>Installation and Setup</a>
 
+A description of how to download and setup a signbank, starting from scratch.
 
-## <a id=f8aeb>1. Download the Source</a>
+
+## <a id=f8a>1. Download the Source</a>
 
 First, find the signbank you want to install and download it. There are a lot
-of them on Github, in this guide it is assumed you'll get it from there. For
-example, to fetch the Isof Signbank (*Isof* is an abbreviation for “Institutet
-för språk och folkminnen” a Swedish government agency):
+of them on Github, and in this guide I'll assume you'll download it from there
+(though most of the stuff below should apply to most signbanks, regardless of
+where you downloaded it from).
 
-    git clone https://github.com/ISOF-ITD/FinSL-signbank.wiki.git isof-signbank
+Here I'll fetch the Isof Signbank (*Isof* is an abbreviation for “Institutet
+för språk och folkminnen” – a Swedish government agency):
+
+    git clone https://github.com/ISOF-ITD/FinSL-signbank.git
 
 There exists many Signbanks to choose from:
 
@@ -21,22 +26,12 @@ There exists many Signbanks to choose from:
   * [Finnish Signbank](https://github.com/Signbank/FinSL-signbank.git)
     ([website](https://signbank.csc.fi/))
   * [The Github Signbank
-    Organization](https://github.com/orgs/Signbank/repositories) (lists
-    additional signbanks)
+    Organization](https://github.com/orgs/Signbank/repositories) (has a list of
+    additional Signbanks)
 
-Note that some repositories may contain multiple branches. And you might want
-to use some other branch than the default one. After cloning the repository you
-can list the branches using:
+**Note:** [Building a non-default branch](#c0a)
 
-    git pull --all
-    git branch -a
-
-And if you want to switch branch, use:
-
-    git checkout <branch-name>
-
-
-## <a id=28153>2. Set up Python *Virtual Environment*</a>
+## <a id=281>2. Set up Python *Virtual Environment*</a>
 
 Before installing the necessary dependencies and running Django, you'll
 probably want to create a Python *virtual environment* for your Signbank. This
@@ -75,7 +70,7 @@ wasn't admin, in which case I managed to get by just fine using `virtualenv`
 (which *was* installed).
 
 
-## <a id=c4055>3. Install Required Python Modules</a>
+## <a id=c40>3. Install Required Python Modules</a>
 
     source venv/bin/activate
     #pip install wheel                        # if install fails
@@ -96,7 +91,7 @@ The `django-debug-toolbar` will be needed later for the `createsuperuser` and
 `makemigrations` commands, so you might as well install it now.
 
 
-## <a id=d4298>4. Configure Signbank</a>
+## <a id=d42>4. Configure Signbank</a>
 
 The following files need to be edited:
 
@@ -133,7 +128,7 @@ Settings changed in `signbank/settings/production.py`:
     -ALLOWED_HOSTS = ['signbank.csc.fi']
     +ALLOWED_HOSTS = ['signbank.ling.su.se']
 
-**Note:** [`ALLOWED_HOSTS` *must not contain a port number*.](#b278e)
+**Note:** [`ALLOWED_HOSTS` *must not contain a port number*.](#b27)
 
      # A list of directories where Django looks for translation files.
      LOCALE_PATHS = (
@@ -185,7 +180,7 @@ https://miniwebtool.com/django-secret-key-generator/.
      }
 
 
-## <a id=7e9cd>5. Setting Up the Database</a>
+## <a id=7e9>5. Setting Up the Database</a>
 
 From what I understand this is used to populate, or at least build up the
 structure of the database. I'll just quote the docs on [Database migration] in
@@ -252,7 +247,7 @@ Restoring the database from the dump is achieved using:
      sqlite3 signbank.db <signbank.db.dump.txt
 
 
-## <a id=89aa6>6. Create Admin User</a>
+## <a id=89a>6. Create Admin User</a>
 
     source venv/bin/activate
     python bin/develop.py createsuperuser
@@ -279,7 +274,7 @@ See also:
   + [[#ebc64e8d2e][List Django users]]
 
 
-## <a id=2c01d>Django Admin Pages (Static Files)</a>
+## <a id=2c0>Django Admin Pages (Static Files)</a>
 
 Upon installing and loading the Django admin interface i noticed that
 stylesheets etc weren't loaded. In the server config we had set up the
@@ -296,7 +291,7 @@ only two, namely `gis` and `admin`). After this the admin pages loaded just
 fine. [https://signbank.ling.su.se/admin/]
 
 
-## <a id=f68de>Django Admin Doc Pages (`docutils`)</a>
+## <a id=f68>Django Admin Doc Pages (`docutils`)</a>
 
 Clicking the 'DOCUMENTATION' link of the admin page gave me an error message
 saying that the documentation requires the `docutils` package. So I installed
@@ -309,13 +304,27 @@ And then killed and restarted Django with:
     python bin/production.py runserver 0.0.0.0:8080
 
 
-# <a id=2ccb0>Additional Details</a>
+# <a id=2cc>Additional Details</a>
 
 These are some footnotes and additional details that would've mostly been a
 distraction should they've occurred in the main body of the text.
 
+## <a id=c0a>Checking Out a Different Branch in Git</a>
 
-## <a id=e9cb4>List Django Subcommands</a>
+**Note:** Some of the repositories may contain more than one branch. In this
+case you'll get the `master` (or `main`) branch unless you manually specify
+which branch you want to check out. After cloning the repository you can list
+the branches using:
+
+    git pull --all
+    git branch -a
+
+And if you want to switch branch, use:
+
+    git checkout <branch-name>
+
+
+## <a id=e9c>List Django Subcommands</a>
 
 To list the subcommands available with `bin/develop.py` and `bin/production.py`
 use the `help` subcommand, like so:
@@ -327,7 +336,7 @@ Additional information for each subcommand can be obtained using:
     python bin/develop.py help SUBCOMMAND
 
 
-## <a id=b278e>Port number in `ALLOWED_HOSTS`</a>
+## <a id=b27>Port number in `ALLOWED_HOSTS`</a>
 
 Regardless of whether or not you're using a port number in the URL to access
 your Signbank instance (e.g. `http://stssignbank.webtrick.se:8080/`) no port
@@ -339,7 +348,7 @@ happily start for you, but when you try to loading the corresponding web page
 you will a `ERROR 400: Bad Request.` error:
 
 
-## <a id=e0229>`makemigrations` fail (‘cannot import name 'ugettext_lazy'’)</a>
+## <a id=e02>`makemigrations` fail (‘cannot import name 'ugettext_lazy'’)</a>
 
 When I ran `python bin/develop.py makemigrations` I got a stack dump ending in
 the following error message.
@@ -378,6 +387,7 @@ but for simplicity's sake I'll just skip describing that here.)
     pip install wheel                        # if install fails
     pip install -r requirements.txt
     python bin/develop.py showmigrations
+
 
 
 # [eof]
