@@ -14,10 +14,13 @@ för språk och folkminnen” a Swedish government agency):
 
 There exists many Signbanks to choose from:
 
-  * [Isof Signbank](https://github.com/ISOF-ITD/FinSL-signbank)
-  * [Stockholm University Signbank](https://github.com/zrajm/FinSL-signbank)
-  * [Finnish Signbank](https://github.com/Signbank/FinSL-signbank.git)
-  * [Signbank “Organization”](https://github.com/orgs/Signbank/repositories)
+  * [Isof Signbank](https://github.com/ISOF-ITD/FinSL-signbank) --
+    [website](https://frigg.isof.se/teckenlistan/dictionary/public/translation/)
+  * [Stockholm University Signbank](https://github.com/zrajm/FinSL-signbank) --
+    [website](https://signbank.ling.su.se/)
+  * [Finnish Signbank](https://github.com/Signbank/FinSL-signbank.git) --
+    [website](https://signbank.csc.fi/)
+  * [The Github Signbank Organization](https://github.com/orgs/Signbank/repositories)
     (Lists additional Signbanks.)
 
 Note that some repositories may contain multiple branches. And you might want
