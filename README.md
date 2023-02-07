@@ -3,7 +3,7 @@
 # <a id=e8c60>Installation and Setup</a>
 
 
-## <a id=f8aeb></a> 1. Download the Source
+## <a id=f8aeb>1. Download the Source</a>
 
 First, find the signbank you want to install and download it. There are a lot
 of them on Github, in this guide it is assumed you'll get it from there. For
@@ -32,7 +32,7 @@ And if you want to switch branch, use:
     git checkout <branch-name>
 
 
-## <a id=28153></a> 2. Set up Python *Virtual Environment*
+## <a id=28153>2. Set up Python *Virtual Environment*</a>
 
 Before installing the necessary dependencies and running Django, you'll
 probably want to create a Python *virtual environment* for your Signbank. This
@@ -71,7 +71,7 @@ wasn't admin, in which case I managed to get by just fine using `virtualenv`
 (which *was* installed).
 
 
-## <a id=c4055></a> 3. Install Required Python Modules
+## <a id=c4055>3. Install Required Python Modules</a>
 
     source venv/bin/activate
     #pip install wheel                        # if install fails
@@ -92,7 +92,7 @@ The `django-debug-toolbar` will be needed later for the `createsuperuser` and
 `makemigrations` commands, so you might as well install it now.
 
 
-## <a id=d4298></a> 4. Configure Signbank
+## <a id=d4298>4. Configure Signbank</a>
 
 The following files need to be edited:
 
@@ -181,7 +181,7 @@ https://miniwebtool.com/django-secret-key-generator/.
      }
 
 
-## <a id=7e9cd></a> 5. Setting Up the Database
+## <a id=7e9cd>5. Setting Up the Database</a>
 
 From what I understand this is used to populate, or at least build up the
 structure of the database. I'll just quote the docs on [Database migration] in
@@ -248,7 +248,7 @@ Restoring the database from the dump is achieved using:
      sqlite3 signbank.db <signbank.db.dump.txt
 
 
-## <a id=89aa6></a> 6. Create Admin User
+## <a id=89aa6>6. Create Admin User</a>
 
     source venv/bin/activate
     python bin/develop.py createsuperuser
@@ -275,7 +275,7 @@ See also:
   + [[#ebc64e8d2e][List Django users]]
 
 
-## <a id=2c01d></a> Django Admin Pages (Static Files)
+## <a id=2c01d>Django Admin Pages (Static Files)</a>
 
 Upon installing and loading the Django admin interface i noticed that
 stylesheets etc weren't loaded. In the server config we had set up the
@@ -292,7 +292,7 @@ only two, namely `gis` and `admin`). After this the admin pages loaded just
 fine. [https://signbank.ling.su.se/admin/]
 
 
-## <a id=f68de></a> Django Admin Doc Pages (`docutils`)
+## <a id=f68de>Django Admin Doc Pages (`docutils`)</a>
 
 Clicking the 'DOCUMENTATION' link of the admin page gave me an error message
 saying that the documentation requires the `docutils` package. So I installed
@@ -305,13 +305,13 @@ And then killed and restarted Django with:
     python bin/production.py runserver 0.0.0.0:8080
 
 
-# <a id=2ccb0></a> Additional Details
+# <a id=2ccb0>Additional Details</a>
 
 These are some footnotes and additional details that would've mostly been a
 distraction should they've occurred in the main body of the text.
 
 
-## <a id=e9cb4></a> List Django Subcommands
+## <a id=e9cb4>List Django Subcommands</a>
 
 To list the subcommands available with `bin/develop.py` and `bin/production.py`
 use the `help` subcommand, like so:
@@ -323,7 +323,7 @@ Additional information for each subcommand can be obtained using:
     python bin/develop.py help SUBCOMMAND
 
 
-## <a id=b278e></a> Port number in `ALLOWED_HOSTS`
+## <a id=b278e>Port number in `ALLOWED_HOSTS`</a>
 
 Regardless of whether or not you're using a port number in the URL to access
 your Signbank instance (e.g. `http://stssignbank.webtrick.se:8080/`) no port
@@ -335,7 +335,7 @@ happily start for you, but when you try to loading the corresponding web page
 you will a `ERROR 400: Bad Request.` error:
 
 
-## <a id=e0229></a> `makemigrations` fail (‘cannot import name 'ugettext_lazy'’)
+## <a id=e0229>`makemigrations` fail (‘cannot import name 'ugettext_lazy'’)</a>
 
 When I ran `python bin/develop.py makemigrations` I got a stack dump ending in
 the following error message.
