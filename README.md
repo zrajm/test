@@ -7,6 +7,9 @@
 
 # abouc - sochou
 
+# osucrhosuh - nobsp
+
+# tab	-	souhsou
 
 # räksmörgås .
 
