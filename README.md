@@ -1,4 +1,4 @@
-# 1.14. - em—dash - en–dash hy-phen ellipsis… «guillemets» two--hyphens   tab
+# 1.14. - em—dash - en–dash hy-phen ellipsis… «guillemets» two  spaces two--hyphens	tab
 
 <!--*- markdown -*-->
 
