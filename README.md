@@ -1,25 +1,4 @@
-# 1.1 test
-# 1.1 test
-# 1.1 test-abc-dee-eff
-
-# abc_def-ghi
-
-# abc---def
-
-# abouc - sochou
-
-# “curly quotes”
-
-# em—dash en–dash ellipsis… «guillemets»
-
-# osucrhosuh - nobsp
-
-# tab	-	souhsou
-
-# räksmörgås .
-
-# ÅÄÖ
-
+# 1.14 - em—dash en–dash hy-phen ellipsis… «guillemets» two--hyphens
 
 <!--*- markdown -*-->
 
