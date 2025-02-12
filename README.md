@@ -2,7 +2,7 @@
 
 <!--*- markdown -*-->
 
-# <a id=e8c60>Installation and Setup</a>
+# <a name=e8c60>Installation and Setup</a>
 
 A description of how to download and setup a signbank, starting from scratch.
 
