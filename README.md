@@ -8,6 +8,9 @@
 
 # abouc - sochou
 
+# “curly quotes”
+
+
 # osucrhosuh - nobsp
 
 # tab	-	souhsou
