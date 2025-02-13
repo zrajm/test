@@ -2,6 +2,8 @@
 
 <h1 id="xxx">xxx</h1>
 
+<h1 id="xxx" id="yyy">yyy</h1>
+
 # xxx
 
 <h1 id="xxx">xxx</h1>
