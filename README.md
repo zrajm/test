@@ -1,6 +1,15 @@
 
 <toc>
 
+Here is a simple footnote[^1]. With some additional text after it.
+
+[^1]: My reference.
+
+
+Here is a simple footnote[^note2]. With some additional text after it.
+
+[^note2]: My reference. 
+
 
 # xxx
 
