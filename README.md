@@ -419,9 +419,10 @@ but for simplicity's sake I'll just skip describing that here.)
 
 
 
-# [eof]
 <!--
 Local Variables:
 markdown-hide-markup: nil
 End:
 -->
+<!--[eof]-->
+
