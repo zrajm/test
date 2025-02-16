@@ -437,7 +437,7 @@ End:
 
 [shortpic]: #shortpic
 
-<a id=shortpic>shortpic</a>
+<a id=shortpic></a>shortpic
 
 
 
