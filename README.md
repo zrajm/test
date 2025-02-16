@@ -4,6 +4,8 @@
 [hej]: #hej
 hejhej <a id=hej>*hej*</a> hej[hej]
 
+[shortpic]
+
 
 \\\`\*\_\{\}\[\]\(\)\#\+\-\.\!
 
@@ -432,5 +434,12 @@ Local Variables:
 markdown-hide-markup: nil
 End:
 -->
+
+[shortpic]: #shortpic
+
+<a id=shortpic>shortpic</a>
+
+
+
 <!--[eof]-->
 
