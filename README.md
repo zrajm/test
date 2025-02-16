@@ -1,7 +1,8 @@
 
 <toc>
 
-hejhej <a id=hej></a> hejhej
+[hej]: #hej
+hejhej <a id=hej></a> hej[hej]
 
 
 \\\`\*\_\{\}\[\]\(\)\#\+\-\.\!
