@@ -1,6 +1,11 @@
 
 <toc>
 
+Each link expands into <tt>\<a href="*url*" title="*title*"\>*text*\</a\></tt>
+where *`url`*, *`text`* and (the optional) *`title`* are values given in the
+Markdown. (The Markdown `ref` value is not present in the outputted HTML.)
+
+
 [hej]: #hej
 hejhej <a id=hej>*hej*</a> hej[hej]
 
