@@ -10,10 +10,10 @@ hejhej <a id=hej>*hej*</a> hej[hej]
 
 [shortpic]
 
-# Green blu white
+# Green blu white {#helloes}
 
 
-teosut testeos [Green blu white] soteusoteuh
+teosut testeos [Green blu white] [helloes] [helloes2](#helloes) soteusoteuh
 
 \\\`\*\_\{\}\[\]\(\)\#\+\-\.\!
 
