@@ -4,7 +4,7 @@ Each link expands into <tt>\<a href="*url*" title="*title*"\>*text*\</a\></tt>
 where *`url`*, *`text`* and (the optional) *`title`* are values given in the
 Markdown. (The Markdown `ref` value is not present in the outputted HTML.)
 
-#   1 1. 2  2. hej -  hex --   x   x__--x..y
+#   1 1. 2  2. hej -  hex --   x   x__--x..yäöo◌̈a
 
 
 [hej]: #hej
