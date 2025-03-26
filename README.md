@@ -6,6 +6,7 @@ Markdown. (The Markdown `ref` value is not present in the outputted HTML.)
 
 #   1 1. 2  2. hej -  hex --   x   x__--x..yäöo◌̈a
 
+# 1.2  - åäö
 
 [hej]: #hej
 hejhej <a id=hej>*hej*</a> hej[hej]
