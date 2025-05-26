@@ -1,6 +1,8 @@
 <toc>
 
 <#test>
+<@test>
+<12 test>
 
 
 Each link expands into <tt>\<a href="*url*" title="*title*"\>*text*\</a\></tt>
