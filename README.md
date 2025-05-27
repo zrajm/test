@@ -1,5 +1,9 @@
 <toc>
 
+# hej {#ga}
+
+# {#ga2} hej2
+
 <x-test>
 <x- test>
 <#test> 
