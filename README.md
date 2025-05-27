@@ -1,6 +1,8 @@
 <toc>
 
-<#test>
+<x-test>
+<x- test>
+<#test> 
 <@test>
 <12 test>
 <-test>
