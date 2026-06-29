@@ -1,5 +1,15 @@
 <toc>
 
+~~~css                                                                                                                                                                              
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */                                                                             
+                                                                                                                                                                                    
+/* Remove bookmark ⭐ button from URL field. */                                                                                                                                     
+#star-button-box { display: none !important; }                                                                                                                                      
+                                                                                                                                                                                    
+/* Remove 'reader' button from the URL field. */                                                                                                                                    
+#reader-mode-button { display: none !important; }                                                                                                                                   
+~~~                                                                                                                                                                                 
+
 ![image]
 
 [image]: urlbar-dislike.png
