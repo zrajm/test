@@ -1,5 +1,9 @@
 <toc>
 
+![image]
+
+[image]: pic/image.png
+
 # hej {#ga}
 
 # {#ga2} hej2
