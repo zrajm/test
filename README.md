@@ -2,7 +2,7 @@
 
 ![image]
 
-[image]: pic/image.png
+[image]: urlbar-dislike.png
 
 # hej {#ga}
 
