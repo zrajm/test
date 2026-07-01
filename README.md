@@ -1,5 +1,17 @@
 <toc>
 
+~~~mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+%% this is a comment
+    Still --> Moving
+    Moving --> Still %% another comment
+    Moving --> Crash
+    Crash --> [*]
+~~~
+
+
 ~~~css                                                                                                                                                                              
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */                                                                             
                                                                                                                                                                                     
