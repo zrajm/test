@@ -498,7 +498,6 @@ End:
 [shortpic]: #shortpic
 
 <a id=shortpic></a>shortpic
-
 # Perl Experiments
 
 This directory contains some experimentation, written in Perl.
@@ -514,7 +513,18 @@ To run whatever tests there are, `cd` to this directory and run the command
 fashion).
 
 
-## `StateMachine` Module
+## StateMachine Module
+
+`StateMachine.pm` implements [finite-state machine]. More specifically a
+[nondeterministic finite-state machine] ('nondeterministic' means that machine
+can be in multiple states at the same time, which is very useful for [natural
+language processing]).
+
+
+### Input
+
+
+### Output
 
 Here's an example of what the morphological parse of the words in a sentence
 might be, using the StateMachine module. (Note that the StateMachine automaton
@@ -554,10 +564,14 @@ my @out = map { [$fsa->run($_)] } qw{bIjeghbe'chugh vaj bIHegh};
 ~~~
 
 
-## `DependencyParser` Module
+## `DependencyParser.pm`
 
 
-## `ZDB` Module
+## `ZDB.pm`
 
+
+[Finite-State Machine]: https://en.wikipedia.org/wiki/Finite-state_machine "Wikipedia: Finite-State Machine"
+[Natural Language Processing]: https://en.wikipedia.org/wiki/Natural_language_processing "Wikipedia: Natural language processing"
+[Nondeterministic Finite-State Machine]: https://en.wikipedia.org/wiki/Nondeterministic_finite-state_machine "Wikipedia: Nondeterministic Finite-State Machine"
 
 <!--EOF-->
