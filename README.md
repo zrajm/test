@@ -499,7 +499,60 @@ End:
 
 <a id=shortpic></a>shortpic
 
+# Perl Experiments
+
+This directory contains some experimentation, written in Perl.
 
 
-<!--[eof]-->
+## Running the Unit Tests
 
+Unit tests for this project in still a work in progress (i.e. they could be
+better). To run whatever tests there are, `cd` to this directory and run the
+command `prove` in your shell. This will run all `t/*.t` test files (in
+standard Perl fashion).
+
+
+## `StateMachine.pm` Module
+
+The following is the result of a morphological parse of the sentence
+{bIjeghbe'chugh vaj bIHegh} as returned by:
+
+   my $fsa = new StateMachine(...);
+   my @out = map { [$fsa->run($_)] } qw/bIjeghbe'chugh vaj bIHegh/;
+   # @out = (
+   #   [ # 1st word: {bIjeghbe'chugh}
+   #     {
+   #       type => "V-SYN",
+   #       parts => [{ type => "vp",   text => "bI"    },
+   #                 { type => "v",    text => "jegh"  },
+   #                 { type => "vsr1", text => "be'"   },
+   #                 { type => "vs9m", text => "chugh" }]
+   #     }
+   #   ],
+   #   [ # 2nd word: {vaj} (ambiguous word w/ two alternatives)
+   #     { # 1st alternative: 'n'
+   #       type => "N",
+   #       parts => [{ type => "n", text => "vaj" }]
+   #     },
+   #     { # 2nd alternative: 'adv'
+   #       type => "ADV",
+   #       parts => [{ type => "adv", text => "vaj" }]
+   #     }
+   #   ],
+   #   [ # 3rd word: {bIHegh}
+   #     {
+   #       type => "V",
+   #       parts => [{ type => "vp", text => "bI"   },
+   #                 { type => "v",  text => "Hegh" }]
+   #     }
+   #   ]
+   # );
+
+
+## `DependencyParser.pm` Module
+
+
+## `ZDB.pm` Module
+
+
+<!--EOF-->
