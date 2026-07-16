@@ -503,26 +503,30 @@ End:
 
 This directory contains some experimentation, written in Perl.
 
+
 ## Running the Unit Tests
 
 Unit tests for this project in still a work in progress (i.e. they could be
-better). To run whatever tests there are, `cd` to this directory and run the
-command `prove` in your shell. This will run all `t/*.t` test files (in
-standard Perl fashion).
+better).
+
+To run whatever tests there are, `cd` to this directory and run the command
+`prove` in your shell. This will run all `t/*.t` test files (in standard Perl
+fashion).
 
 
 ## `StateMachine` Module
 
-The following is the result of a morphological parse of the sentence
-{bIjeghbe'chugh vaj bIHegh} as returned by:
+Here's an example of what the morphological parse of the words in a sentence
+might be, using the StateMachine module. (Note that the StateMachine automaton
+is invoked for each word, rather than once for the entire sentence.)
 
-```
-my $fsa = new StateMachine(...);
-my @out = map { [$fsa->run($_)] } qw/bIjeghbe'chugh vaj bIHegh/;
+~~~perl
+my $fsa = new StateMachine("klingon-morphology.fsm");
+my @out = map { [$fsa->run($_)] } qw{bIjeghbe'chugh vaj bIHegh};
 # @out = (
 #   [ # 1st word: {bIjeghbe'chugh}
 #     {
-#       type => "V-SYN",
+#       type  => "v-syn",
 #       parts => [{ type => "vp",   text => "bI"    },
 #                 { type => "v",    text => "jegh"  },
 #                 { type => "vsr1", text => "be'"   },
@@ -531,23 +535,24 @@ my @out = map { [$fsa->run($_)] } qw/bIjeghbe'chugh vaj bIHegh/;
 #   ],
 #   [ # 2nd word: {vaj} (ambiguous word w/ two alternatives)
 #     { # 1st alternative: 'n'
-#       type => "N",
+#       type  => "n",
 #       parts => [{ type => "n", text => "vaj" }]
 #     },
 #     { # 2nd alternative: 'adv'
-#       type => "ADV",
+#       type  => "adv",
 #       parts => [{ type => "adv", text => "vaj" }]
 #     }
 #   ],
 #   [ # 3rd word: {bIHegh}
 #     {
-#       type => "V",
+#       type  => "v",
 #       parts => [{ type => "vp", text => "bI"   },
 #                 { type => "v",  text => "Hegh" }]
 #     }
 #   ]
 # );
-```
+~~~
+
 
 ## `DependencyParser` Module
 
