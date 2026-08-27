@@ -1,9 +1,9 @@
----
+<!---
 title: My Article Title
 author: Zhang San
 tags: [GitHub, Markdown, Metadata]
 date: 2026-08-27
----
+--->
 
 <toc>
 
