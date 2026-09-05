@@ -35,7 +35,7 @@ stateDiagram-v2
 
 [image]: urlbar-dislike.png
 
-<center>
+<center markdown>
 ![image]
 </center>
 
