@@ -35,6 +35,11 @@ stateDiagram-v2
 
 [image]: urlbar-dislike.png
 
+<center>
+![image]
+</center>
+
+
 # hej {#ga}
 
 # {#ga2} hej2
