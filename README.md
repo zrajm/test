@@ -5,6 +5,9 @@ tags: [GitHub, Markdown, Metadata]
 date: 2026-08-27
 --->
 
+
+<nobr>`</xmp>`xxx</nobr>
+
 <toc>
 
 # Marks/Bookmarks
